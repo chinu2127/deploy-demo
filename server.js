@@ -5,8 +5,8 @@ const dotenv = require("dotenv");
 // const chatRoutes = require("./routes/chatRoutes");
 // const messageRoutes = require("./routes/messageRoutes");
 // const { notFound, errorHandler } = require("./middleware/errorMiddleware");
-const path = require("path");
-const cors = require("cors");
+// const path = require("path");
+// const cors = require("cors");
 dotenv.config();
 connectDB();
 
@@ -14,15 +14,11 @@ const app = express();
 app.use(express.json()); // to accept json data
 
 app.get("/", (req, res) => {
-  res.send("<h1>API is working fine</h1>");
+  res.send("added socket implementation</h1>");
 });
 
-// app.use("/api/user", userRoutes);
-// app.use("/api/chat", chatRoutes);
-// app.use("/api/message", messageRoutes);
-
 app.get("/user", (req, res) => {
-  res.send("<h1>added socket implementation</h1>");
+  res.send("<h1>USER API IS WORKING</h1>");
 });
 
 const PORT = process.env.PORT;
